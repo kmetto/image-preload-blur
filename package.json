@@ -9,7 +9,7 @@
     "demo": "lite-server"
   },
   "author": "Konstantin Metto <met9127@gmail.com> (https://unicore.by)",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
