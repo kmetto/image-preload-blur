@@ -2,7 +2,7 @@
   "name": "image-preload-blur",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.min.js",
   "scripts": {
     "b:d": "cross-env NODE_ENV=dev webpack",
     "b:p": "cross-env NODE_ENV=prod webpack",
