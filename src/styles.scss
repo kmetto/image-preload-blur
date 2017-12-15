@@ -1,0 +1,32 @@
+.image-preload{
+    position: relative;
+    overflow: hidden;
+
+    &__vertical-spacing{
+        
+    }
+
+    > img{
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    &_hq{
+        z-index: 1;
+        &_loaded{
+            opacity: 0!important;
+        }
+    }
+    &_lq{
+        transition: all .3s ease-in-out;
+        filter: url(#preload-image_blur);
+        z-index: 2;
+        opacity: 0;
+
+        &_loaded{
+            opacity: 1;
+        }
+    }
+}

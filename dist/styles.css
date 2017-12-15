@@ -1,0 +1,19 @@
+.image-preload {
+  position: relative;
+  overflow: hidden; }
+  .image-preload > img {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0; }
+  .image-preload_hq {
+    z-index: 1; }
+    .image-preload_hq_loaded {
+      opacity: 0 !important; }
+  .image-preload_lq {
+    transition: all .3s ease-in-out;
+    filter: url(#preload-image_blur);
+    z-index: 2;
+    opacity: 0; }
+    .image-preload_lq_loaded {
+      opacity: 1; }

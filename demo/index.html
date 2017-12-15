@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/dist/styles.css">
+    <title>Image preloader</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .images{
+            display: flex;
+            flex-direction: row;
+        }
+
+        .images > .image-preload {
+            width: 25%;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="images">
+            <figure 
+            class="image-preload"
+            data-lq="data:image/jpeg;base64,/9j/4QAYRXhpZgAASUkqAAgAAAAAAAAAAAAAAP/sABFEdWNreQABAAQAAAAyAAD/7gAOQWRvYmUAZMAAAAAB/9sAhAAIBgYGBgYIBgYIDAgHCAwOCggICg4QDQ0ODQ0QEQwODQ0ODBEPEhMUExIPGBgaGhgYIyIiIiMnJycnJycnJycnAQkICAkKCQsJCQsOCw0LDhEODg4OERMNDQ4NDRMYEQ8PDw8RGBYXFBQUFxYaGhgYGhohISAhIScnJycnJycnJyf/wAARCAASABsDASIAAhEBAxEB/8QAfwAAAgIDAAAAAAAAAAAAAAAAAAcEBQECAwEBAQEAAAAAAAAAAAAAAAAAAwIEEAABAgMEBQkJAAAAAAAAAAABAgMAEQQSNAUGITGBMhNBUWEiM1MUFTXBUmLCQ2Nzs0QRAAIBBAAHAAAAAAAAAAAAAAECABEhEjJBYXFykgME/9oADAMBAAIRAxEAPwBpVWeMFYSeKSqWsJBVFG/n3KjqFKNM8653SEgHaqdkQnanG6l6TrLanGFBRDypBsAGVrrG0vYIrna6pcZLhKmi87wKUpmSFgddZab1JkrQnTr080AiqupYnupLYZChCgdMo+GceydVssPsoUU1Cy2ErklSFAFRDiVGY0Jjp4zLnd8vOISmB8OqabwWkfaGZHEPBD1i34RqQtOLWFFIcKU6QJ2Yh+MxCza8wVLjeW7o7adm3q3Z8uuFD2IyfyhH51qpCevmcbzLV2Ts/Hs6IkUnp+Jdpdm7pfN5XYfa974pwQQImnhIuWLlX3S5Pen3vdG78/RG/wDb9C8bLn+/2wQRY2Mk6if/2Q=="
+            data-hq="/demo/images/app.jpg"
+            data-height="1171"
+            data-width="1920"
+            >
+            </figure>
+            <figure 
+            class="image-preload"
+            data-lq="data:image/jpeg;base64,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"
+            data-hq="/demo/images/sales.jpg"
+            data-height="1171"
+            data-width="1920"
+            >
+            </figure>
+            <figure 
+            class="image-preload"
+            data-lq="data:image/jpeg;base64,/9j/4QAYRXhpZgAASUkqAAgAAAAAAAAAAAAAAP/sABFEdWNreQABAAQAAAAyAAD/7gAOQWRvYmUAZMAAAAAB/9sAhAAIBgYGBgYIBgYIDAgHCAwOCggICg4QDQ0ODQ0QEQwODQ0ODBEPEhMUExIPGBgaGhgYIyIiIiMnJycnJycnJycnAQkICAkKCQsJCQsOCw0LDhEODg4OERMNDQ4NDRMYEQ8PDw8RGBYXFBQUFxYaGhgYGhohISAhIScnJycnJycnJyf/wAARCAASABsDASIAAhEBAxEB/8QAdQAAAwEBAAAAAAAAAAAAAAAAAAUGBAcBAQADAAAAAAAAAAAAAAAAAAABBAUQAAECAwUCCgsBAAAAAAAAAAECAwARBDESMhMFIUFRYYEiQiMzgzQGccFigpKywkMUNUUWEQEBAQAAAAAAAAAAAAAAAAAAEUH/2gAMAwEAAhEDEQA/ADUNCRqFLmKcylMJ6gJF0CfNCV3dqivDLgiDKHaRx2mcGUppUi2oCY4uSyOr1C8tVOoAJYWFqW4vYUrSiTQu77xJib1Dyk1rdVV1OosrCwwE6WWXkIJdBGx9K080b71saFVCHQ9Jf1FQcUm620cyREsxQ2KQDvSBbFN/ltNvTy+rv/ky9i7LI+PbwRv0th2ipaWiqkparGAnq5ySQDI3VdIFO8Ww3ykYJKngs7yXplCkI9M8ecdh8R2vueuHyrU8mGy3fBBEDD5g/WdDF9yzu+OJzof0+y+v5YIIYP/Z"
+            data-hq="/demo/images/marketing.jpg"
+            data-height="1171"
+            data-width="1920"
+            >
+            </figure>
+            <figure 
+            class="image-preload"
+            data-lq="data:image/jpeg;base64,/9j/4QAYRXhpZgAASUkqAAgAAAAAAAAAAAAAAP/sABFEdWNreQABAAQAAAAyAAD/7gAOQWRvYmUAZMAAAAAB/9sAhAAIBgYGBgYIBgYIDAgHCAwOCggICg4QDQ0ODQ0QEQwODQ0ODBEPEhMUExIPGBgaGhgYIyIiIiMnJycnJycnJycnAQkICAkKCQsJCQsOCw0LDhEODg4OERMNDQ4NDRMYEQ8PDw8RGBYXFBQUFxYaGhgYGhohISAhIScnJycnJycnJyf/wAARCAASABsDASIAAhEBAxEB/8QAfAAAAwEBAAAAAAAAAAAAAAAAAAQHBQEBAQEAAAAAAAAAAAAAAAAAAAQFEAABAgQDAwkJAQAAAAAAAAACAQMAETEEEhMFITIzUWGBIkIUNBUG8EGRUmJywkM1FhEAAQMDAwUAAAAAAAAAAAAAAgABESESAzEUNEFxsXIT/9oADAMBAAIRAxEAPwBDSvRLjoCTodUkjeX0TZWdq5dXDROCKDMRSZSVUTZ8Y3dP9QWIaWTjwI6LIKo4VwkRLtknPONvRyubyzDzN8e8PpmE0QjhbEtotYhrhSq8sUiMm6QylhiB4eZlTRrSdFvAeAbe50t1gjbdZuhzExJSTjSKm3nhX/PMyl3xumGeYlZzl93ulWKlZ6cN67qVsFwrJs3jrIugXWRDk4omvIqFHfItKzuCWLMyN8J48rlwSnh7dZc8F3TfSyapmzay+KRoo3ZcO18RvJvUr7T6IqVhw04tArXoggheTRBxJjTf7mq7/iT3tzhN8X6vlhrtft8R+MEESR5J92VkuOHq/hf/2Q=="
+            data-hq="/demo/images/service.jpg"
+            data-height="1171"
+            data-width="1920"
+            >
+            </figure>
+    </div>
+    <script src="/dist/index.js"></script>
+    <script>
+        preloadImages();
+    </script>
+</body>
+</html>
